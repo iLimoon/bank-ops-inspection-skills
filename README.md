@@ -4,10 +4,20 @@
 
 ## 快速开始
 
-将 `skills/` 目录复制到项目 `.claude/skills/` 下即可：
+### 方式A：npx skills 安装（推荐）
 
 ```bash
-cp -r skills/ /你的项目路径/.claude/skills/
+npx skills add <你的GitHub用户名>/bank-ops-inspection-skills
+```
+
+### 方式B：直接复制
+
+将仓库内所有技能目录复制到项目 `.claude/skills/` 下：
+
+```bash
+git clone https://github.com/<你的GitHub用户名>/bank-ops-inspection-skills.git
+cp -r bank-ops-inspection-skills/* 你的项目/.claude/skills/
+# 注意：不需要复制 README.md
 ```
 
 ## 前置条件
@@ -142,7 +152,8 @@ output/
 ## 目录结构
 
 ```
-skills/
+bank-ops-inspection-skills/
+├── README.md                            # 本文件
 ├── references/
 │   └── data-discovery.md               # 共享数据发现策略
 ├── scripts/
