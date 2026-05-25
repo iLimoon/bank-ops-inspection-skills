@@ -7,18 +7,25 @@
 ### 方式A：npx skills 安装（推荐）
 
 ```bash
-npx skills add <你的GitHub用户名>/bank-ops-inspection-skills
+npx skills add <GitHub用户名>/bank-ops-inspection-skills
 ```
 
-### 方式B：直接复制
-
-将仓库内所有技能目录复制到项目 `.claude/skills/` 下：
+### 方式B：git clone + 复制
 
 ```bash
-git clone https://github.com/<你的GitHub用户名>/bank-ops-inspection-skills.git
-cp -r bank-ops-inspection-skills/* 你的项目/.claude/skills/
+git clone https://github.com/<GitHub用户名>/bank-ops-inspection-skills.git
+cp -r bank-ops-inspection-skills/change_event_correlation/ \
+      bank-ops-inspection-skills/comprehensive_correlation_heatmap/ \
+      ... \
+      bank-ops-inspection-skills/references/ \
+      bank-ops-inspection-skills/scripts/ \
+      /path/to/项目/.claude/skills/
 # 注意：不需要复制 README.md
 ```
+
+### 方式C：下载 tar.gz
+
+从 GitHub Releases 下载 `claude-skills-pack.tar.gz`，解压后按方式B复制。
 
 ## 前置条件
 
