@@ -13,19 +13,26 @@ npx skills add iLimoon/bank-ops-inspection-skills
 ### 方式B：git clone + 复制
 
 ```bash
-git clone https://github.com/iLimoon/bank-ops-inspection-skills.git
-cp -r bank-ops-inspection-skills/change_event_correlation/ \
-      bank-ops-inspection-skills/comprehensive_correlation_heatmap/ \
-      ... \
-      bank-ops-inspection-skills/references/ \
-      bank-ops-inspection-skills/scripts/ \
-      /path/to/项目/.claude/skills/
-# 注意：不需要复制 README.md
+git clone git@github.com:iLimoon/bank-ops-inspection-skills.git
+cp -r bank-ops-inspection-skills/* /path/to/项目/.claude/skills/
+rm /path/to/项目/.claude/skills/README.md
 ```
 
-### 方式C：下载 tar.gz
+### 方式C：压缩包分享
 
-从 GitHub Releases 下载 `claude-skills-pack.tar.gz`，解压后按方式B复制。
+将 `claude-skills-pack.tar.gz` 通过 U 盘/网盘/聊天工具发给同事，解压后复制到 `.claude/skills/`：
+
+```bash
+tar xzf claude-skills-pack.tar.gz
+cp -r change_event_correlation/ comprehensive_correlation_heatmap/ \
+      database_capacity_analysis/ dependency_performance_analysis/ \
+      error_timeout_analysis/ multi_system_comparison/ \
+      pca_cluster_analysis/ server_resource_analysis/ \
+      storage_capacity_trend/ system_availability_analysis/ \
+      transaction_performance_analysis/ trend_prediction_capacity_alert/ \
+      weekly_inspection_analysis/ references/ scripts/ \
+      /path/to/项目/.claude/skills/
+```
 
 ## 前置条件
 
