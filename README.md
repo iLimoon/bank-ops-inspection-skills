@@ -7,13 +7,13 @@
 ### 方式A：npx skills 安装（推荐）
 
 ```bash
-npx skills add <GitHub用户名>/bank-ops-inspection-skills
+npx skills add iLimoon/bank-ops-inspection-skills
 ```
 
 ### 方式B：git clone + 复制
 
 ```bash
-git clone https://github.com/<GitHub用户名>/bank-ops-inspection-skills.git
+git clone https://github.com/iLimoon/bank-ops-inspection-skills.git
 cp -r bank-ops-inspection-skills/change_event_correlation/ \
       bank-ops-inspection-skills/comprehensive_correlation_heatmap/ \
       ... \
